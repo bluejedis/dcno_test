@@ -10,11 +10,13 @@
   - 用户 <span style="color: black;">可</span><span style="color: LimeGreen;">见</span>寄存器
     - 特点：
       - 可对这类寄存器编程
-      - 可通过使用这类寄存器减少对主存储器的访问次数
+      - 可通过使用这类寄存器减少对主<span style="color: Gold;">M</span>的访问次数
     - 包括：
       - 通用寄存器组（含基址/变址寄存器）
       - 程序状态字寄存器
+<br>
       - 程序计数器
+<br>
       - 累加寄存器
       - 移位寄存器
   - 用户<span style="color: purple;">不</span><span style="color: black;">可</span><span style="color: LimeGreen;">见</span>寄存器
@@ -25,7 +27,7 @@
     - 包括：
       - 存储器地址寄存器
       - 存储器数据寄存器
-      - 指令寄存器
+      - <span style="color: LightSkyBlue;">I</span> 寄存器
       - 暂存寄存器
 >pro：CPU中各种寄存器的作用（2013）  
 
@@ -37,12 +39,12 @@
 
 <ul>
 
-- 功能：
-  - 存放操作数：
-    - 源操作数
-    - 目的操作数
+- function：
+  - 存放 操作数：
+    - 源 操作数
+    - 目的 ~
     - 中间结果
-  - 存放地址信息：
+  - ~ 地址信息：
     - 常见寄存器如：
       - AX
       - BX
@@ -50,8 +52,8 @@
       - DX
       - SP
 - 访问方式：
-  - 指令中指定寄存器 <span style="color: black;">编号</span>
-  - 通过编号 确定访问的具体寄存器
+  - <span style="color: LightSkyBlue;">I</span> 中指定寄存器 <span style="color: black;">编号</span>
+  - through 编号 确定访问的具体寄存器
 - SP特点：
   - 堆栈指针
   - 指示栈顶地址
@@ -61,36 +63,39 @@
 
 <ul>
 
-- 功能：
+暂存结果
+
+- function：
   - 通用寄存器
   - 存储：
-    - 暂时存放ALU运算的结果
+    - 暂时 存放ALU运算的 结果
 </ul>
 
 ####  <span style="color: silver;"><span style="color: green;">移</span>位~（<span style="color: green;">S</span>R）
 
 <ul>
 
-- 功能：
+- function：
   - 存储：
-    - 可用来存放操作数
+    - 存放 操作数
   - 移位操作：
-    - 在控制信号作用下
+    - 在 控制信号 作用下
     - 寄存器中的数据可：
       - 向左移位
-      - 向右移位
+      - 向右移~
 </ul>
 
-####  <span style="color: silver;">暂 <span style="color: Gold;">存</span>~
+####  <span style="color: silver;">暂<span style="color: Gold;">存</span>~
 
 <ul>
 
-- 功能：
+- function：
   - 暂存数据：
     - 来源：
-      - 数据总线
-      - 通用寄存器
-    - 目的：在取出下一个操作数时将其同时送入ALU
+      - 数据Bus
+      - 通用R
+    - 目的：
+      - 在取出下一个操作数时将其同时送入ALU
   - 可见性：
     - 对应用程序员是透明的（不可见）
 </ul>
@@ -99,16 +104,18 @@
 
 <ul>
 
-- 功能和组成：
-  - 保留 由算术/逻辑运算指令 或 测试指令 的运行结果 而建立的各种 <span style="color: Gold;">状态</span><span style="color: gray;">信息</span>
+- function和组成：
+  - 保留 由算术/逻辑运算<span style="color: LightSkyBlue;">I</span>  或 测试<span style="color: LightSkyBlue;">I</span>  的运行 结果 
+  - 而建立的各种 <span style="color: Gold;">状态</span><span style="color: gray;">信息</span>
   - 包含的标志位：
     -  <span style="color: LimeGreen;">溢出</span>标志（ <span style="color: LimeGreen;">O</span>F）
     -  <span style="color: Gold;">符号</span>标志（ <span style="color: Gold;">S</span>F） 
     - <span style="color: LightSkyBlue;">零</span>标志（<span style="color: LightSkyBlue;">Z</span>F）
     - <span style="color: green;">进位</span>标志（<span style="color: green;">C</span>F）
   - 存储方式：
-    - 每个标志位由一位触发器来保存
-    - 所有标志位组合在一起构成程序状态字
+    - 每个标志位
+      - 由一位触发器来保存
+    - all标志位组合在一起构成 PSW
 </ul>
 
 </ul>
@@ -117,41 +124,42 @@
 
 <ul>
 
->pro：PC和<span style="color: LightSkyBlue;">I</span><span style="color: LimeGreen;">R</span>的位数与主存储器空间和指令字长的关系（2016、2021）  
+>pro：PC和<span style="color: LightSkyBlue;">I</span><span style="color: LimeGreen;">R</span>的位数与主<span style="color: Gold;">M</span>空间和<span style="color: LightSkyBlue;">I</span> 字长的关系（2016、2021）  
 
 ####  <span style="color: silver;">程序计数器（<span style="color: LightSkyBlue;">P</span><span style="color: LimeGreen;">C</span>）
 
 <ul>
 
-- 功能：
-  - 指出欲执行指令在主存储器中的存放地址
+- function：
+  - 指出 
+    - 欲执行<span style="color: LightSkyBlue;">I</span>  in 主<span style="color: Gold;">M</span>中的 存放<span style="color: DarkRed;">地址</span>
 
 - 位数：
-  - 当PC和主存储器均按字节编址时
-  - PC的位数等于主存储器地址位数
+  - when PC和主<span style="color: Gold;">M</span> both 按字节编址时
+  - PC的位数 = 主<span style="color: Gold;">M</span>地址位数
 
-- 指令获取过程：
-  - CPU根据PC的内容从主存储器中取指令
-  - 取出的指令送入指令寄存器
+- <span style="color: LightSkyBlue;">I</span> 获取过程：
+  - CPU根据PC的内容从主<span style="color: Gold;">M</span>中取<span style="color: LightSkyBlue;">I</span> 
+  - 取出的<span style="color: LightSkyBlue;">I</span> 送入<span style="color: LightSkyBlue;">I</span> 寄存器
 
-- 自动加1功能：
-  - 指令通常顺序执行
-  - PC会自动加1
-    - 这里的"1"指一条指令的字节数
+- 自动+1 function：
+  - <span style="color: LightSkyBlue;">I</span> 通常顺序执行
+  - PC会自动+1
+    - 这里的"1"指一条<span style="color: LightSkyBlue;">I</span> 的字节数
 
-- 特殊情况：
-  - 遇到转移类指令时
-  - PC的新值由指令计算得到
+- special：
+  - meet 转移类<span style="color: LightSkyBlue;">I</span> 时
+  - PC的新值 由<span style="color: LightSkyBlue;">I</span> 计算得到
 </ul>
 
-####  <span style="color: silver;">指令~（<span style="color: LightSkyBlue;">I</span>R）
+####  <span style="color: silver;"><span style="color: LightSkyBlue;">I</span> ~（<span style="color: LightSkyBlue;">I</span>R）
 
 <ul>
 
-- 功能：
-  - 用于保存当前正在执行的指令
+- function：
+  - 用于保存当前正在执行的<span style="color: LightSkyBlue;">I</span> 
 - 规格：
-  - IR的位数等于指令字长
+  - IR的位数 = <span style="color: LightSkyBlue;">I</span> 字长
 </ul>
 
 ####  <span style="color: silver;">存储器地址~（M<span style="color: DarkRed;">A</span>R）
@@ -160,7 +168,7 @@
 
 - 存放要访问的 <span style="color: gray;">主memory</span>单元的<span style="color: DarkRed;">地址</span>
 - MAR的位数
-  - 等于主存储器地址线数
+  - 等于主<span style="color: Gold;">M</span>地址线数
   - 反映了最多可寻址的存储单元的个数
 </ul>
 
@@ -168,12 +176,12 @@
 
 <ul>
 
-  - 功能：
-    - 存放向 I/O 主存储器' <span style="color: gray;">信息</span>
+  - function：
+    - 存放向 I/O 主<span style="color: Gold;">M</span>' <span style="color: gray;">信息</span>
   - 规格：
     - MDR的位数等于存储字长
   - 使用场景：
-    - CPU和主存储器交换信息时
+    - CPU和主<span style="color: Gold;">M</span>交换信息时
       - 需要同时使用MAR和MDR
 </ul>
 
