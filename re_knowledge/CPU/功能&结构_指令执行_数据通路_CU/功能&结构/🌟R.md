@@ -129,28 +129,39 @@
 ####  <span style="color: silver;">程序计数器（<span style="color: LightSkyBlue;">P</span><span style="color: LimeGreen;">C</span>）
 
 <ul>
+show <span style="color: LightSkyBlue;">指令</span><span style="color: DarkRed;">地址</span>
 
 - function：
   - 指出 
     - 欲执行<span style="color: LightSkyBlue;">I</span>  in 主<span style="color: Gold;">M</span>中的 存放<span style="color: DarkRed;">地址</span>
 
-- 位数：
-  - when PC和主<span style="color: Gold;">M</span> both 按字节编址时
-  - PC的位数 = 主<span style="color: Gold;">M</span>地址位数
+-  <span style="color: LimeGreen;">位数</span>：
+   - when PC和主<span style="color: Gold;">M</span> both 按<span style="color: LightSkyBlue;">Byte</span>编址时
+     -  = 主<span style="color: Gold;">M</span><span style="color: DarkRed;">地址</span>  <span style="color: LimeGreen;">位数</span>
 
-- <span style="color: LightSkyBlue;">I</span> 获取过程：
-  - CPU根据PC的内容从主<span style="color: Gold;">M</span>中取<span style="color: LightSkyBlue;">I</span> 
-  - 取出的<span style="color: LightSkyBlue;">I</span> 送入<span style="color: LightSkyBlue;">I</span> 寄存器
+   - 按 <span style="color: gray;">word</span> 编址时
+     - = 主<span style="color: Gold;">M</span><span style="color: DarkRed;">地址</span>  <span style="color: LimeGreen;">位数</span>-$log_2(Byte_{{\color{skyblue}指令}字长})$
+   - (both can 边界<span style="color: Gold;">对齐</span>的方式存放)
+     - data'存储位置must is its 数据类型大小'<span style="color: DarkSeaGreen;">整数</span>倍
 
-- 自动+1 function：
-  - <span style="color: LightSkyBlue;">I</span> 通常顺序执行
-  - PC会自动+1
-    - 这里的"1"指一条<span style="color: LightSkyBlue;">I</span> 的字节数
+- <span style="color: LightSkyBlue;">I</span> 获取：
+  - from主<span style="color: Gold;">M</span>中取<span style="color: LightSkyBlue;">I</span> 
+  - <span style="color: LightSkyBlue;">I</span> → <span style="color: LightSkyBlue;">I</span><span style="color: LimeGreen;">R</span>
+- <b>+1</b> function：
+  - <span style="color: LightSkyBlue;">I</span> usually 顺序执行
+  - PC will +1 [^1]
+    - "1": 
+      - 一条<span style="color: LightSkyBlue;">I</span> 的<span style="color: LightSkyBlue;">Byte</span>数
 
 - special：
-  - meet 转移类<span style="color: LightSkyBlue;">I</span> 时
+  - meet Jcc[^2] <span style="color: LightSkyBlue;">I</span> 时
   - PC的新值 由<span style="color: LightSkyBlue;">I</span> 计算得到
+
+
+
 </ul>
+
+
 
 ####  <span style="color: silver;"><span style="color: LightSkyBlue;">I</span> ~（<span style="color: LightSkyBlue;">I</span>R）
 
@@ -195,3 +206,19 @@
 
 </div>
 <div style="clear: both;"></div>
+
+[^1]:“1”实际上代表的是指令的长度，而不是固定值1。
+    - PC+ ? ← <span style="color: LightSkyBlue;">指令</span>字长 & 编<span style="color: DarkRed;">址</span>方式
+
+    - eg，
+      - if定长指令字结构
+        - <span style="color: LightSkyBlue;">指令</span>字长=16位（M按byte编址）
+          - PC + 2（因为16位等于2个byte）
+        - if 32位
+          - PC + 4..
+
+[^2]: Jcc时need judge 转移whether成功
+    - if成功
+      - →  <span style="color: LimeGreen;">目标</span>地址
+    - if else
+      - PC自增后'~
