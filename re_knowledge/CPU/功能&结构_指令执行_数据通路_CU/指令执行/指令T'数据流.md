@@ -108,7 +108,7 @@
   - 根据IR中的指令字的操作码通过ALU操作产生执行结果
 - 特点
   - 不同指令的执行周期操作不同
-  - 因此没有统一的数据流向
+  - → no 统一的数据流向
 </ul>
 
 ###  <span style="color: Gold;">中断</span> <span style="color: silver;">T 
