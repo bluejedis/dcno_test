@@ -1,4 +1,5 @@
 <div style="float: left; width: 64%; padding: 1%;">
+
 ##  <span style="color: silver;"><span style="color: LightSkyBlue;">指令</span>T'<span style="color: LightSkyBlue;">数据</span><span style="color: silver;">流  
 
 <ul>
@@ -43,17 +44,18 @@
 
 <ul>
 
-- PC到存储器的数据流向:
+- PC→M:
   - <span style="color: LightSkyBlue;">P</span><span style="color: LimeGreen;">C</span> → MAR → <span style="color: DarkRed;">地址</span>bus → <span style="color: Gold;">M</span>
 
-- CU发出读命令的流向:
+- CU send 读命令的流向:
   - CU读命令 →  <span style="color: Gold;">控制</span>bus →  <span style="color: Gold;">M
 
-- 获取指令的流向:
+- get 指令的流向:
   - 主存 → <span style="color: LightSkyBlue;">数据</span>bus → M<span style="color: LightSkyBlue;">D</span>R → IR（存放指令）
 
 - PC更新流向:
   - CU发出控制信号 → <span style="color: LightSkyBlue;">P</span><span style="color: LimeGreen;">C</span>+1
+
 ![](https://cdn-mineru.openxlab.org.cn/model-mineru/prod/f75084f25f382c3b663c9acfe77f401b2ea0ef4abcdf6fe2e458bbf2de1010ae.jpg)  
 图5.4取指周期的数据流  
 </ul>
@@ -74,7 +76,7 @@
     - 将指令中的地址码送到MAR
     - 将MAR中的地址码送至地址总线
   - step2:
-    - CU向存储器发出读命令
+    - CU向 <span style="color: Gold;">M</span>发出读命令
     - 获取有效地址
     - 将有效地址存至MDR
 </ul>
@@ -83,7 +85,7 @@
 
 <ul>
 
-- Ad(IR)(或MDR)到存储器的数据流向:
+- Ad(IR)(或MDR)到 <span style="color: Gold;">M</span>的数据流向:
   - Ad(<span style="color: LightSkyBlue;">I</span><span style="color: LimeGreen;">R</span>)(或MDR) → M<span style="color: DarkRed;">A</span>R → <span style="color: DarkRed;">地址</span>bus →  <span style="color: Gold;">M
 - CU发出读命令的流向:
   - CU读命令 →  <span style="color: Gold;">控制</span>bus →  <span style="color: Gold;">M
@@ -129,10 +131,10 @@
 <ul>
 
 -  <span style="color: Gold;">C</span>U控制将 SP-1
-     - SP ① M<span style="color: DarkRed;">A</span>R ② <span style="color: DarkRed;">地址</span>bus ③ 存储器
+     - SP ① M<span style="color: DarkRed;">A</span>R ② <span style="color: DarkRed;">地址</span>bus ③  <span style="color: Gold;">M</span>
 - CU发出 <span style="color: LimeGreen;">写</span>命令
-  - 写命令 ④ 控制总线 ⑤ 存储器
-- 程序<span style="color: gray;">断点</span>存入存储器
+  - 写命令 ④ 控制总线 ⑤  <span style="color: Gold;">M</span>
+- 程序<span style="color: gray;">断点</span>存入 <span style="color: Gold;">M</span>
   - PC ⑥ MDR ⑦ 数据总线 ⑧ 主存
 -  <span style="color: Gold;">C</span>U<u>处理</u>中断服务
      - CU(中断服务程序的入口地址) ⑨ PC
