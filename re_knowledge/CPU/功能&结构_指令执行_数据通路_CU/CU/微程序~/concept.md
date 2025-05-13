@@ -1,4 +1,5 @@
 <div style="float: left; width: 64%; padding: 1%;">
+
 ## <span style="color: SlateBlue;">微</span><span style="color: LightSkyBlue;">程序</span> <span style="color: silver;">控制器  
 
 <ul>
@@ -6,57 +7,63 @@
 - 实现方式：
   - 采用 <span style="color: Gold;">存储</span>逻辑实现
 - 实现原理：
-  - 将微操作信号<span style="color: LightSkyBlue;">代码</span> <span style="color: LimeGreen;">化</span>
-  - 每条机器指令转化为一段微程序
-  - 将微程序存入控制存储器中
+  - 将微<span style="color: LimeGreen;">操作</span>信号<span style="color: LightSkyBlue;">代码</span> <span style="color: LimeGreen;">化</span>
+    - every机器指令转化为一段<span style="color: SlateBlue;">微</span><span style="color: LightSkyBlue;">程序</span>
+  - 将 ~ 存入控制存储器中
 - 控制信号生成：
-  - 微操作控制信号由微指令产生
+  - <span style="color: SlateBlue;">微</span><span style="color: LightSkyBlue;">指令</span>
 ###  <span style="color: silver;">基本概念  
 
 <ul>
 
 - 设计思想：
-  - 机器指令与微程序的关系：
-    - 每条机器指令对应一个微程序
-  - 微程序的组成：
+  - <span style="color: gray;">机器</span>指令与<span style="color: SlateBlue;">微</span><span style="color: LightSkyBlue;">程序</span>的关系：
+    - every 机器指令 correspond 一个<span style="color: SlateBlue;">微</span><span style="color: LightSkyBlue;">程序</span>
+  - <span style="color: SlateBlue;">微</span><span style="color: LightSkyBlue;">程序</span>的组成：
     - 由若干条微指令构成
-    - 每条微指令可对应一个或多个微操作命令
-  - 指令执行过程：
-    - 本质是执行对应微程序的过程
+    - 每条微指令可 correspond 一个或多个微<span style="color: LimeGreen;">操作</span>命令
+<br>
+  - 指令<span style="color: green;">执行</span>过程：
+    - 本质是执行 corresponding<span style="color: SlateBlue;">微</span><span style="color: LightSkyBlue;">程序</span>的过程
   - 存储位置：
-    - 所有微程序存放在控制存储器中
+    - all <span style="color: SlateBlue;">微</span><span style="color: LightSkyBlue;">程序</span>stored in 控制M
   - 应用现状：
-    - 目前大多数计算机都采用此技术
-####  <span style="color: silver;"><span style="color: purple;">微</span><span style="color: LightSkyBlue;">命令</span>与微 <span style="color: LimeGreen;">操作
+    - most pc
+####  <span style="color: silver;"><span style="color: purple;">微</span><span style="color: LightSkyBlue;">命令</span>与微<span style="color: LimeGreen;">操作</span>
 
 <ul>
 
 - 微命令：
-  - 控制部件向执行部件发出的各种控制命令
-  - 是构成控制序列的最小单位
-  - 例如：打开/关闭控制门、寄存器打入脉冲
-- 微操作：
-  - 执行部件收到微命令后进行的操作
+  - 控制部件向 执行部件发出的各种 控制命令
+  - 是构成控制序列的 min单位
+  - 例如：
+    - 打开/关闭控制门、寄存器打入脉冲
+- 微<span style="color: LimeGreen;">操作</span>：
+  - 执行部件 receive 微命令后进行的操作
   - 与微命令一一对应
 - 微命令分类：
-  - 相容性微命令：可同时出现完成某些微操作
-  - 互斥性微命令：不允许同时出现
+  - 相容性~：
+    - 可同时出现完成某些微<span style="color: LimeGreen;">操作</span>
+  - 互斥性~：
+    - can't同时出现
 
 </ul>
 
 >attention:  
-硬布线控制器中也有微命令与微操作的概念，并非微程序控制器的专有概念。  
+硬布线控制器中也有微命令与微<span style="color: LimeGreen;">操作</span>的概念，并非<span style="color: SlateBlue;">微</span><span style="color: LightSkyBlue;">程序</span>控制器的专有概念。  
 
 #### <span style="color: silver;"><span style="color: purple;">微</span><span style="color: RoyalBlue;">指令</span>与微$T$
 
 <ul>
 
-- 微指令组成：
-  - 操作控制字段（微操作码字段）：产生操作控制信号
-  - 顺序控制字段（微地址码字段）：控制下一条微指令地址
+- <span style="color: purple;">微</span><span style="color: RoyalBlue;">指令</span>组成：
+  - 操作控制字段（微<span style="color: LimeGreen;">操作</span>码字段）：
+    - produce 操作控制<span style="color: Gold;">信号</span>
+  - 顺序控制字段（微地址码字段）：
+    - 控制下一条微指令地址
 - 微周期：
-  - 取出并执行一条微指令所需的全部时间
-  - 通常为一个时钟周期
+  - <span style="color: LightSkyBlue;">取</span>出& <span style="color: LimeGreen;">执行</span> 一条微指令所需'全部t
+  - usually 一个时钟T
 
 </ul>
 
@@ -70,12 +77,14 @@
   - 位置：CPU外部
   - 实现：用RAM
 - 控制M：
-  - 用途：存放微程序
+  - 用途：存放<span style="color: SlateBlue;">微</span><span style="color: LightSkyBlue;">程序</span>
   - 位置：CPU内部
   - 实现：用ROM
   - 单元地址称为微地址
 
 </ul>
+
+<br>
 
 ####  <span style="color: silver;">程序与<span style="color: purple;">微</span>程序
 
@@ -88,7 +97,7 @@
   - 存储位置：
     - 主存
     - 辅存
-- 微程序：
+- <span style="color: SlateBlue;">微</span><span style="color: LightSkyBlue;">程序</span>：
   - 定义：<u>微指令</u>的有序集合
   - 功能：
     - 描述机器指令
