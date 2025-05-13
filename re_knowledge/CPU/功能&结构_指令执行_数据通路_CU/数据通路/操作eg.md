@@ -1,5 +1,13 @@
 <div style="float: left; width: 64%; padding: 1%;">
+
 ## ~ <span style="color: silver;"><span style="color: green;">操作</span>举例  
+
+<span style="color: silver;">通用<span style="color: LimeGreen;">R</span>之间传送<span style="color: LightSkyBlue;">数据  
+- <span style="color: silver;">从<span style="color: Gold;">主</span><span style="color: LimeGreen;">存</span>  <span style="color: GreenYellow;">读取</span>数据  
+- <span style="color: silver;">将数据 <span style="color: black;">写入</span> <span style="color: Gold;">主<span style="color: LimeGreen;">存
+
+<span style="color: silver;">执行 <span style="color: LimeGreen;">算术</span>或<span style="color: Gold;">逻辑</span>运算  
+<span style="color: silver;">修改<span style="color: LightSkyBlue;">P</span><span style="color: LimeGreen;">C</span>的值  
 
 <ul>
 
@@ -7,11 +15,15 @@
   - 它不能存储信息
   - 任一时刻也只能有一个部件把信息送到总线上
 
+
 <span style="font-size: 14px;">以图5.8所示的单总线数据通路为例
 - 常见操作的流程及控制信号
 
 >pro：指令执行的节拍及有效控制信号（2009、2015）：指令在取数和执行阶段所用到的部件（2019）  
 
+<br>
+
+![](https://cdn-mineru.openxlab.org.cn/model-mineru/prod/0161e7b16de00d520d62405d382e730a37430111a550273cdc1cb28934a907c8.jpg) 
 ###  <span style="color: silver;">通用<span style="color: LimeGreen;">R</span>之间传送<span style="color: LightSkyBlue;">数据  
 
 <ul>
