@@ -17,7 +17,7 @@
   - 水平型微指令包含以下编码方式：
     - <span style="color: gray;">直接</span>编码
     - <span style="color: LightSkyBlue;">字段</span><span style="color: gray;">直接</span>编码 
-    - <span style="color: LightSkyBlue;">字段</span>间接编码
+    - <span style="color: LightSkyBlue;">字段</span> <span style="color: Gold;">间接</span>编码
 - 基本指令格式：
   - 格式结构：
     - 如图

@@ -5,9 +5,9 @@
 <ul>
 
 - 目的：
-  - 保证速度的情况下缩短微指令字长
+  - 保证速度的情况下 <span style="color: Gold;">缩短</span>μ<span style="color: LightSkyBlue;">I</span>字长
 - 作用：
-  - 对微指令控制字段编码
+  - 对μ<span style="color: LightSkyBlue;">I</span>控制字段编码
   - 形成控制信号
 
 ####  <span style="color: silver;"><span style="color: gray;">直接</span>~
@@ -23,8 +23,8 @@
   - 执行速度快
   - 操作并行性好
 - 缺点：
-  - 微指令字长过长
-  - 控制存储器容量大
+  - μ<span style="color: LightSkyBlue;">I</span>字长过长
+  - <span style="color: Gold;">C</span>M 容量大 
 
 ![](https://cdn-mineru.openxlab.org.cn/model-mineru/prod/c6e197e941e2f1058a37b511cbaa37823f47acc90dd408d7e4f2e9e15c655007.jpg)  
 图5.12直接编码方式  
@@ -35,6 +35,8 @@
 <ul>
 
 >pro：字段直接控制的编码方法（2012）  
+
+for  <span style="color: LimeGreen;">并行</span>
 - 基本方法：
   - 操作控制字段分成<span style="color: gray;">若干</span>小字段
     - <span style="font-size: 12px;">将整个操作控制字段划分为多个独立的小字段
@@ -71,9 +73,10 @@
   - 非直接译码发出微命令
   - <span style="color: gray;">隐式</span>编码
 - 优缺点：
-  - 优点：进一步缩短微指令字长
-  - 缺点：<span style="color: LightSkyBlue;">削弱</span>并行控制能力
-  - 用途：作为字段直接编码的辅助手段
+  - 优点：进一步缩短μ<span style="color: LightSkyBlue;">I</span>字长
+  - 缺点：<span style="color: LightSkyBlue;">削弱</span><span style="color: green;">并行</span>控制能力
+  - 用途：
+    - as字段直接编码的辅助手段
 </ul>
 
 </ul>

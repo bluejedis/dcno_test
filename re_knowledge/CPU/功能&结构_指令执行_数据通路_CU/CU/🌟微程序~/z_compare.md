@@ -1,7 +1,7 @@
 <div style="float: left; width: 64%; padding: 1%;">
 
 ###  <span style="color: silver;"> compare: 
-
+is电路'就fast
 <ul>
 
 >pro：硬布线控制器和微程序控制器的特点（2009）  
@@ -31,7 +31,7 @@
 
 </ul>
 
-#### 对比总结
+####  <span style="color: silver;">对比总结
 
 <ul>
 
