@@ -2,6 +2,7 @@
 
 ## <span style="color: LightSkyBlue;"><span style="color: LightSkyBlue;">指令</span></span> <span style="color: silver;">周期  
 
+3I_4T
 <ul>
 <span style="color: LightSkyBlue;">指令</span>T > 机器~ > 时钟~
 
@@ -55,7 +56,7 @@
   - 中断检查：
     - CPU在每条<span style="color: LightSkyBlue;">指令</span>执行结束前 发出中断查询信号
     - 发现中断请求时 → 中断响应阶段（中断周期）
-  - 完整T：
+  - 完整T[^1]：
     -  <span style="color: LimeGreen;">取</span><span style="color: LightSkyBlue;">指</span>T
     -  <span style="color: LimeGreen;">间</span><span style="color: DarkRed;">址</span>~
     - <span style="color: green;">执行</span>~
@@ -73,8 +74,8 @@
 <ul>
 
 ####  <span style="color: silver;"><span style="color: LimeGreen;">取</span><span style="color: LightSkyBlue;">指</span>T
-- 取<span style="color: LightSkyBlue;">指令</span>操作
-  - 从PC指向的主存单元取出<span style="color: LightSkyBlue;">指令</span>
+- 取<span style="color: LightSkyBlue;">指令</span>操作[^2]
+  - 从PC指向的主存单元取出<span style="color: LightSkyBlue;">指令</span>(字)
   - 将<span style="color: LightSkyBlue;">指令</span>送至<span style="color: LightSkyBlue;">指令</span>寄存器
 - PC更新操作
   - PC加"1"准备下一条<span style="color: LightSkyBlue;">指令</span>地址
@@ -119,3 +120,11 @@
 
 </div>
 <div style="clear: both;"></div>
+
+[^1]:all 包括 n个机器T
+
+[^2]:双字I、三~ 与单~'
+取指<span style="color: LimeGreen;">操作</span>different
+
+[^3]:一次间址、两次~ 和多次~， <span style="color: LimeGreen;">操作</span> 不同
+
