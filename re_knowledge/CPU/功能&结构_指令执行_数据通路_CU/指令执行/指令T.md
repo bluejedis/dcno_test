@@ -4,7 +4,7 @@
 
 3I_4T
 <ul>
-<span style="color: LightSkyBlue;">指令</span>T > 机器~ > 时钟~
+ <span style="color: Gold;">时钟</span>~ ->机器~ -> <span style="color: LightSkyBlue;">指令</span>T 
 
 ###  <span style="color: silver;">concept
 

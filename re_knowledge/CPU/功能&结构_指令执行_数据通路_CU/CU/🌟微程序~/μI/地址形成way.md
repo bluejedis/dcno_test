@@ -15,7 +15,7 @@
 - 由μ<span style="color: LightSkyBlue;">I</span>的后继地址字段直接 point 后继μ<span style="color: LightSkyBlue;">I</span>的地址
   - 直接从字段中获取地址信息
   - 无需额外计算或转换
-- also called as断定方式
+- also called as<span style="color: DarkRed;">断定</span>方式
   - cause地址is确定的
   - 不依赖于其他条件
 </ul>
