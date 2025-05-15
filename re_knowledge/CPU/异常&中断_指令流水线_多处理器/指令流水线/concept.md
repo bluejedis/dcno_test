@@ -52,17 +52,17 @@
 
 - 5个基本流水<span style="color: gray;">段</span>
   - 取指(<span style="color: LightSkyBlue;">I</span><span style="color: GreenYellow;">F</span>)
-    - 功能：从指令存储器或Cache中取指令
+    - 从指令存储器或Cache中取指令
   - 译码/读寄存器(I<span style="color: deepskyblue;">D</span>) 
-    - 功能：操作控制器译码
-    - 功能：从寄存器堆取操作数
+    - 操作控制器译码
+    - 从寄存器堆取操作数
   - 执行/计算地址( <span style="color: LimeGreen;">EX</span>)
-    - 功能：执行运算
-    - 功能：计算地址
+    - 执行运算
+    - 计算地址
   - 访存(<span style="color: gray;">MEM</span>)
-    - 功能：对存储器进行读/写操作
+    - 对存储器进行读/写操作
   - 写回(<span style="color: gray;">W</span><span style="color: GreenYellow;">B</span>)
-    - 功能：将执行结果写回寄存器堆
+    - 将执行结果写回寄存器堆
 
 ![](https://cdn-mineru.openxlab.org.cn/model-mineru/prod/4e4d3b2fd28bf010d15ebe5c04890299db4e9d522cfa5616dd58c870df156a3c.jpg)  
 
