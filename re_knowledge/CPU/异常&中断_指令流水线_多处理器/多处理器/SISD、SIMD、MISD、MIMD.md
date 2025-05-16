@@ -10,8 +10,8 @@
 
 <ul>
 
-- 基于指令流和数据流的数量：
-  - SISD(单 指令流 单 数据流)
+- 基于 <span style="color: LightSkyBlue;">I</span> 流和数据流的数量：
+  - SISD(单  <span style="color: LightSkyBlue;">I</span> 流 单 数据流)
   - SIMD 
   - MISD
   - MIMD
@@ -19,34 +19,34 @@
   - 常规单处理器 → SISD
   - 常规多处理器 → MIMD
 
-###   <span style="color: silver;"> <span style="color: Gold;">S</span>I<span style="color: Gold;">S</span>D  
+###   <span style="color: silver;"> <span style="color: Lime;">S</span>I<span style="color: Lime;">S</span>D  
 
 <ul>
 
 - SISD是<span style="color: gray;">传统</span>的事行计算机结构
   - 特点：
     - 仅包含一个处理器和一个存储器
-    - 一段时间内仅执行一条指令
-    - 按指令流规定的顺序串行执行指令流中的若干指令
+    - 一段时间内仅执行一条 <span style="color: LightSkyBlue;">I</span> 
+    - 按 <span style="color: LightSkyBlue;">I</span> 流规定的顺序串行执行 <span style="color: LightSkyBlue;">I</span> 流中的若干 <span style="color: LightSkyBlue;">I</span> 
   - 优化方式：
-    - 采用流水线方式提高速度
-    - 设置多个功能部件
-    - 采用多模块交叉方式组织存储器
+    - 流水线方式提高速度
+    - 多个功能部件
+    - 多模块 交叉方式组织M
 
 </ul>
 
-###  <span style="color: silver;"> <span style="color: Gold;">S</span>I<span style="color: purple;">M</span>D 
+###  <span style="color: silver;"> <span style="color: Lime;">S</span>I<span style="color: purple;">M</span>D 
 
 <ul>
 
 - SIMD定义：
-  - 一个指令流同时对多个数据流进行处理
-  - (也称 数据级<span style="color: green;">并行</span>技术
+  - 一个 <span style="color: LightSkyBlue;">I</span> 流同时对多个数据流进行处理
+  - (也称 <span style="color: LightSkyBlue;">数据</span><span style="color: Gold;">级</span><span style="color: green;">并行</span>技术
 - 结构组成：
-  - 一个指令控制部件
+  - 一个 <span style="color: LightSkyBlue;">I</span> 控制部件
   - 多个处理单元
-    - 每个单元执行相同指令
-    - 拥有独立的地址寄存器
+    - 每个单元执行相同 <span style="color: LightSkyBlue;">I</span> 
+    - 拥有独立的地址  <span style="color: LimeGreen;">R</span> 
     - 处理不同的数据
 - 应用效率：
   - 最高效：<span style="color: green;">for</span>循环处理数组
@@ -56,11 +56,13 @@
 
 <ul>
 
-- 定义：SIMID的变体，实现直接操作一维数组指令集的CPU
+- 定义：
+  - SIMID的变体
+  - 直接操作一维数组 <span style="color: LightSkyBlue;">I</span> 集的CPU
 - 工作原理：
-  - 将数据组按顺序放入向量寄存器
-  - 以流水化方式依次操作
-  - 结果写回寄存器
+  - 将数据组 按顺序 放入 向量  <span style="color: LimeGreen;">R</span> 
+    - 以流水化方式依次操作
+  - 结果写回  <span style="color: LimeGreen;">R</span> 
 - 应用优势：
   - 特定工作环境中性能提升显著
   - 尤其在数值模拟等领域
@@ -69,11 +71,12 @@
 
 </ul>
 
-###  <span style="color: silver;"><span style="color: purple;">M</span>I<span style="color: Gold;">S</span>D 
+###  <span style="color: silver;"><span style="color: purple;">M</span>I<span style="color: Lime;">S</span>D 
 
 <ul>
 
-- 定义：同时执行多条指令，处理同一个数据
+- 定义：
+  - 同时执行多条 <span style="color: LightSkyBlue;">I</span> ，处理同一个数据
 - 实际上不存在这样的计算机
 
 </ul>
@@ -82,17 +85,17 @@
 
 <ul>
 
-- 定义：同时执行多条指令分别处理多个不同的数据
+- 定义：同时执行多条 <span style="color: LightSkyBlue;">I</span> 分别处理多个不同的数据
 
 ####  <span style="color: silver;">多<span style="color: gray;">计算机</span>系统
 
 <ul>
 
 - 特点：
-  - 每个节点具有私有存储器
-  - 具有独立主存地址空间
-  - 通过消息传递进行数据传送
-  - 也称消息传递MIIMID
+  - 每个节点have私有M
+  - 独立主M地址空间
+  - through 消息传递进行数据传送
+    - 也称 消息传递MIMD
 
 </ul>
 
@@ -101,21 +104,23 @@
 <ul>
 
 - 特点：
-  - 共享存储多处理器(SMP)系统
-  - 具有共享的单一地址空间
-  - 通过存取指令访问所有存储器
-  - 也称共享存储MIIMID
+  -  <span style="color: LimeGreen;">共享</span>M多处理器( <span style="color: LimeGreen;">S</span><span style="color: Gold;">M</span>P)系统
+     - have共享的 <span style="color: LimeGreen;">单一</span><span style="color: DarkRed;">地址</span>空间
+  - through存取 <span style="color: LightSkyBlue;">I</span> 访问所有存储器
+    - 也称共享存储MIMD
 
 </ul>
 
 </ul>
 
-###  <span style="color: silver;">并行计算模式对比( <span style="color: Gold;">S</span>I<span style="color: purple;">M</span>D vs <span style="color: purple;">M</span>I<span style="color: purple;">M</span>D)
+###  <span style="color: silver;">并行计算模式对比( <span style="color: Lime;">S</span>I<span style="color: purple;">M</span>D vs <span style="color: purple;">M</span>I<span style="color: purple;">M</span>D)
 
 <ul>
 
-- SIMD： <span style="color: LimeGreen;">数据</span>级并行模式
-- MIMD： <span style="color: Gold;">线程</span>级或更高级别的并行计算模式
+- SIMD： 
+  - <span style="color: LimeGreen;">数据</span>级并行模式
+- MIMD： 
+  - <span style="color: Gold;">线程</span>级或更高级别的并行计算模式
 
 </ul>
 
