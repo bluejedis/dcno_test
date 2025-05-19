@@ -1,7 +1,7 @@
 <div style="float: left; width: 64%; padding: 1%;">
 
-## <span style="color: LightSkyBlue;">指令</span><span style="color: LimeGreen;">集</span>  <span style="color: silver;">体系<span style="color: green;">结构  <span style="color: LightSkyBlue;">I</span><span style="color: LimeGreen;">S<span style="color: Gold;">A</span>
-
+## <span style="color: LightSkyBlue;">指令</span><span style="color: LimeGreen;">集</span>  <span style="color: silver;">体系<span style="color: green;">结构  <span style="color: LightSkyBlue;">I</span><span style="color: gray;">S</span><span style="color: LimeGreen;">A</span>
+Instruction Set Architecture
 >pro：指令集体系结构（ISA）规定的内容（2022）  
 <ul>
 
@@ -9,7 +9,7 @@
 
 <ul>
 
-- <span style="color: LightSkyBlue;">I</span><span style="color: LimeGreen;">S</span><span style="color: Gold;">A</span>
+- <span style="color: LightSkyBlue;">I</span><span style="color: gray;">S</span><span style="color: LimeGreen;">A</span>
   -  <span style="color: silver;">完整定义了</span><u>软件</u>和<u>硬件</u>之间的 <span style="color: LimeGreen;">接口</span>
       - <span style="color: gray; font-size: 14px;">机器语言或汇编语言程序员应熟悉</span>
   - <span style="color: LightSkyBlue;">指令</span><span style="color: deepskyblue;">系统</span> is（ISA）最<u>核心</u>
@@ -20,7 +20,7 @@
 
 </ul>
 
-###  <span style="color: LightSkyBlue;">I</span><span style="color: LimeGreen;">S</span><span style="color: Gold;">A</span> <span style="color: silver;">规定内容</span>
+###  <span style="color: LightSkyBlue;">I</span><span style="color: gray;">S</span><span style="color: LimeGreen;">A</span> <span style="color: silver;">规定内容</span>
 Instruction Set Architecture，<span style="color: LightSkyBlue;">指令<span style="color: GreenYellow;">集 <span style="color: LimeGreen;">体系 <span style="color: Gold;">结构
 <ul>
 
@@ -28,7 +28,7 @@ Instruction Set Architecture，<span style="color: LightSkyBlue;">指令<span st
 - 格式
 - 寻址方式
 - 操作类型
-- 每种操作对应的操作数的相应规定
+- every操作对应的操作数'相应规定
 
 ####  <span style="color: LimeGreen;">操作</span><span style="color: LightSkyBlue;">数</span>
 - 类型
@@ -51,12 +51,13 @@ Instruction Set Architecture，<span style="color: LightSkyBlue;">指令<span st
 
 </ul>
 
-### <span style="color: LightSkyBlue;">I</span><span style="color: LimeGreen;">S</span><span style="color: Gold;">A</span> <span style="color: silver;">& 程序 <span style="color: LimeGreen;">开发</span>
+### <span style="color: LightSkyBlue;">I</span><span style="color: gray;">S</span><span style="color: LimeGreen;">A</span> <span style="color: silver;">& 程序 <span style="color: LimeGreen;">开发</span>
 <ul>
 
-#### <span style="color: LightSkyBlue;">I</span><span style="color: LimeGreen;">S</span><span style="color: Gold;">A</span> <span style="color: silver;">与机器级程序
+#### <span style="color: LightSkyBlue;">I</span><span style="color: gray;">S</span><span style="color: LimeGreen;">A</span> <span style="color: silver;">与机器级程序
 - <span style="color: green;">规定</span>了机器级程序的格式
-- 机器语言或汇编语言程序员必须对机器的ISA非常熟悉
+- 机器语言或汇编语言程序员
+  - must对机器的ISA非常熟悉
 
 ####  <span style="color: LimeGreen;">高级</span> <span style="color: silver;">语言编程
 - 大多数程序员使用高级语言（如C/C++/Java）编写程序
