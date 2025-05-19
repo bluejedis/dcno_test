@@ -14,9 +14,10 @@ Complex Instruction Set Computer
 - 集成电路技术发展
   - 导致软件 <span style="color: Gold;">成本</span>不断 <span style="color: black;">上升</span>
 - 指令<span style="color: LightSkyBlue;">系统</span> <span style="color: LimeGreen;">改进</span>
-  - 增加更多指令
-  - 增加更复杂指令
-  - 目的：适应不同应用领域
+  - add更多指令
+  - add更复杂指令
+  - 目的：
+    - 适应不同应用领域
 </span>
 
 </ul>
@@ -63,8 +64,8 @@ Complex Instruction Set Computer
        - 占指令总数 <span style="color: black;">20%</span>（简单指令）
        - 但执行次数占程序的80%
      -  <span style="color: GreenYellow;">低</span>~使用指令
-       - 占指令总数 <span style="color: black;">80%</span>（复杂指令）
-       - 但执行次数仅占程序的20%
+          - 占指令总数 <span style="color: black;">80%</span>（复杂指令）
+          - 但执行次数仅占程序的20%
 
 </ul>
 
