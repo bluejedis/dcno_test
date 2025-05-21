@@ -88,6 +88,7 @@
     - "w"表示word（字）
     - "l"表示long（双字）
   - Intel格式：使用ptr
+  *(pointer缩写)*
     - byte ptr
     - word ptr
     - dword ptr
@@ -105,6 +106,7 @@
 
 - 格式对比表
   - 表4.2 AT&T格式指令和Intel格式指令的对比
+
   ![](https://cdn-mineru.openxlab.org.cn/model-mineru/prod/49dd1199e96b48c53ff69b24837136b50fa7439742b0d9afe5606d78dc87dc74.jpg)  
 
 - 符号说明
@@ -161,9 +163,9 @@
 
 - 长度  <span style="color: black;">1Byte
 - 同一指令有 <span style="color: black;">多种</span><span style="color: LightSkyBlue;">编码</span>方式
-  - 如mov指令有28种机内编码
-    - movax,\<conl6> #机器码为B8H 
-    - moval,\<con8> #机器码为BOH
+  - 如mov指令有28种机器编码
+    - mov ax,\<con16> #机器码为B8H 
+    - mov al,\<con8> #机器码为BOH
     - mov \<reg16>,\<reg16>/\<mem16> #机器码为89H
     - mov\<reg8>/\<mem8>,\<reg8> #机器码为8AH
     - mov\<reg16>/\<mem16>,\<reg16> #机器码为8BH
@@ -187,29 +189,38 @@
   - mov\<reg>,\<con>
   - mov\<mem>,\<con>
 - 举例：
-  - moveax,ebx
-  - mov byte ptr[var],5
-- 注意：双操作数不能都是内存
+  ```nasm
+   mov eax,ebx ;将ebx 值复制到eax
+   mov byte ptr [var],5 ;将5保存到 var值指示的内存地址的一字节中
+- 注意：
+  - 双OP 不能都是内存
+    - 即 mov 指令can't 直接从内存复制to内存
+      - can M →R→M
 
 ##### <span style="color: RoyalBlue;">push
-- 功能：将操作数压<span style="color: RoyalBlue;">入</span><span style="color: Gold;">栈
+- 功能：将操作数压<span style="color: RoyalBlue;">入</span><span style="color: Gold;">栈</span>
+  - 常用于 函数调用
+    - ESP is 栈顶
+    - 入栈前先将 ESP - 4
 - 语法：
   - push \<reg32>
   - push \<mem>
   - push \<con32>
 - 举例：
-  - pusheax
-  - push[var]
-
+  ```nasm
+  push eax ;将 eax值入栈
+  push [var] ;将 var值指示的内存地址'4Byte 值入栈
 ##### <span style="color: LightSkyBlue;">pop
 - 功能：执行 <span style="color: LimeGreen;">出</span><span style="color: Gold;">栈</span>工作
-- 语法：
-  - pop\<reg32>
-  - pop\<mem>
+  - 将 ESP指示的地址
+中的内容出栈
+  - ESP + 4
 - 举例：
-  - popeax
-  - pop[ebx]
-
+  
+   ```nasm
+    pop eax ;弹出栈顶元素送到eax
+    pop [ebx] ;弹出栈顶元素送到ebx值指示的内存地址'4 Byte 中
+  ```
 </ul>
 
 #### <span style="color: LightSkyBlue;">算术</span> <span style="color: silver;">和<span style="color: Gold;">逻辑</span> <span style="color: LimeGreen;">运算</span>指令
@@ -229,9 +240,10 @@
   - add/sub\<reg>,\<con>
   - add/sub\<mem>,\<con>
 - 举例：
-  - subeax,10
-  - add byte ptr[var],10
-
+  ```nasm
+  sub eax,10 ;eax-eax-10
+  add byte ptr[var],10 ;
+  ```
 #####  <span style="color: Gold;">inc</span> <span style="color: silver;">/<span style="color: gray;">dec
 - 功能：
   - inc：自 <span style="color: Gold;">加</span>1
@@ -240,7 +252,7 @@
   - inc/dec\<reg>
   - inc/dec\<mem>
 - 举例：
-  - deceax
+  - dec eax
   - inc dword ptr[var]
 
 ##### <span style="color: Goldenrod;">imul
@@ -300,8 +312,8 @@
   - shl/shr\<reg>,\<cl>
   - shl/shr\<mem>,\<cl>
 - 举例：
-  - shleax,1
-  - shrebx,cl
+  - shl eax,1
+  - shr ebx,cl
 
 </ul>
 
@@ -322,24 +334,27 @@
 - 语法：
   - jmp\<label>
 - 举例：
-  - jmpbegin
-
+  ```nasm
+  jmp begin ;转跳到begin标记的指令执行
+  ```
 >pro：条件转移指令与标志位的结合（2013）  
 
 ##### j<span style="color: LimeGreen;">condition
 - 功能： <span style="color: Gold;">条件</span><span style="color: green;">转移</span>
 - 语法：
-  - je\<label>
-  - jz\<label>
-  - jne\<label>
-  - jg\<label>
-  - jge\<label>
-  - jl\<label>
-  - jle\<label>
+  - je\<label>  when equal ; =
+  - jz\<label> ..last result was zero; = 0
+  - jne\<label> ..not equal ;≠
+  - jg\<label> .. greater than ; >
+  - jge\<label> ..greater than or equal to ; ≥
+  - jl\<label> ..less than; <
+  - jle\<label> ..less than or equal to ; ≤
 - 举例：
-  - cmpeax,ebx
-  - jledone
-
+  ```nasm
+  cmp eax,ebx
+  jle done ;若eax值<=ebx值，则跳转到done 执行；
+           ;否则执行NEXT指令
+  ```
 #####  <span style="color: Gold;">cmp</span> <span style="color: silver;">/<span style="color: Goldenrod;">test
 - 功能：
   - cmp： <span style="color: Gold;">比较</span>操作
@@ -349,10 +364,15 @@
   - cmp/test\<reg>,\<mem>
   - cmp/test\<mem>,\<reg>
   - cmp/test\<reg>,\<con>
+- cmp和 test指令
+  - usually 与 jcondition指令搭配使
 - 举例：
-  - cmp dword ptr[var],10
-  - testeax,eax
-
+  ```nasm
+  cmp dword ptr[var],10 ;将 var指示的主存地址的4字节内容，与10比较
+  jne loop ;若相等则继续顺序执行：否则跳转到loop处执行
+  test eax,eax ;测试eax是否为零
+  jz xxxx ;为零则置标志 ZF为1,转跳到xxxx处执行
+  ```
 #####  <span style="color: LimeGreen;">call</span> <span style="color: silver;">/<span style="color: green;">ret
 >pro：call指令的功能（2019）  
 - 功能：
