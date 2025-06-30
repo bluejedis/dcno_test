@@ -36,7 +36,8 @@
 
 <ul>
 
-- I/O<span style="color: LightSkyBlue;">指令</span>：实现CPU与I/O设备的信息交换
+- I/O<span style="color: LightSkyBlue;">指令</span>：
+  - 实现CPU与I/O设备的信息交换
 - I/O<span style="color: green;">硬件</span>
   - 包括外部设备、设备控制器和接口、I/O总线等
   - 通过设备控制器来控制I/O设备的具体动作
@@ -53,7 +54,8 @@
 - 程序<span style="color: SlateBlue;">中断</span>方式
   - 只在I/O设备准备就绪并向CPU发出中断请求时才予以响应
 - <span style="color: DarkRed;">DMA</span>方式
-  - 主存和I/O设备之间有一条直接数据通路
+  - 主存和I/O设备之间
+    - 一条<span style="color: DarkRed;">直接</span>数据通路
   - 无须调用中断服务程序
 - <span style="color: LightSkyBlue;">通道</span>方式
   - 在系统中设有通道控制部件
